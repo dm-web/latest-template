@@ -7,6 +7,9 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        
         <link rel="stylesheet" type="text/css" href="css/styles.css" />
     </head>
     <!--********** End of Head Section **********-->
@@ -170,7 +173,16 @@
         </div>
         <!--********** End of Wrapper Section **********-->
 
+        <script>
+$(window).scroll(function(){
+  var sticky = $('nav'),
+      scroll = $(window).scrollTop();
         
+  if (scroll >= 100) 
+      sticky.addClass('fixed');  
+  else sticky.removeClass('fixed');   
+});
+</script>
     </body>
     <!--********** End of Body Section **********-->
 </html>
